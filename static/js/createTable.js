@@ -11,6 +11,8 @@ function createTable(data) {
                         //행 클릭 이벤트 처리
                         selectedColumn = d.column;
                         updateVisualization();
+                        document.getElementById("nanDropdown").innerText = '처리 방법 선택';
+                        document.getElementById("outlierDropdown").innerText = '처리 방법 선택';
                     });
 
     //각 행에 대해 열 생성

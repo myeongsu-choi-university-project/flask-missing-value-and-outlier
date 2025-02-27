@@ -76,6 +76,7 @@ function processData(type, method) {
                 d[selectedColumn] = replacementValue;
             }
         });
+        document.getElementById("nanDropdown").innerText = method === 'mean' ? '평균' : '중앙값';
     } else if (type === 'outlier') {
         var globalMean = d3.mean(validData);
         var globalStd = d3.deviation(validData);
@@ -89,6 +90,7 @@ function processData(type, method) {
                 }
             }
         });
+        document.getElementById("outlierDropdown").innerText = method === 'mean' ? '평균' : '중앙값';
     }
 
     updateVisualization();
